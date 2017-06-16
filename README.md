@@ -1,7 +1,36 @@
-# Unscented Kalman Filter Project Starter Code
+# Unscented Kalman Filter Project
 Self-Driving Car Engineer Nanodegree Program
 
 ---
+
+## Sensor and Process Noise Matrix
+
+Process noise standard deviation longitudinal acceleration = 2.5m/s^2
+
+Process noise standard deviation yaw acceleration = 2.0rad/s^2.
+
+Laser measurement noise standard deviation position1(x) = 0.15m.
+  
+Laser measurement noise standard deviation position2(y) = 0.15m.
+
+Radar measurement noise standard deviation radius = 0.3m.
+
+Radar measurement noise standard deviation angle = 0.03rad.
+
+Radar measurement noise standard deviation radius change = 0.3m/s.
+
+R_lidar_ << 0.0225, 0, 
+			0, 0.0225;
+
+R_radar_ << 0.09, 0, 0,
+              0, 0.0009, 0,
+              0, 0, 0.09;
+
+## Model Accuracy
+
+The algorithm gives as outputs [0.0369415, 0.0475329, 0.47795, 0.504106] for px, py, vx and vy RMSE which are less than or equals to the values [0.09, 0.09, 0.65, 0.65] when executed with the input file "sample-laser-radar-measurement-data-1.txt"
+
+The algorithm gives as outputs [0.183759, 0.185465, 0.361421, 0.489954] for px, py, vx and vy RMSE which are less than or equal to the values [0.20, 0.20, 0.55, 0.55] when executed with the input file "sample-laser-radar-measurement-data-2.txt"
 
 ## Dependencies
 
